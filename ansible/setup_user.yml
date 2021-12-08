@@ -1,5 +1,5 @@
 - name: Common tool setup on all the servers
-  hosts: nexus
+  hosts: sonar
   become: yes
   
   tasks:
