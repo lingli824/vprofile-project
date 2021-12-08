@@ -1,0 +1,16 @@
+- name: Common tool setup on all the servers
+  hosts: nexus
+  become: yes
+  
+  tasks:
+    - name: Add ling group
+      group:
+        name: ling
+        state: present
+
+    - name: Add ling user
+      user:
+        name: ling
+        group: ling
+        shell: /bin/nologin
+        home: /home/ling    
